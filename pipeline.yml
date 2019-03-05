@@ -18,7 +18,7 @@ jobs:
       run:
         path: bash
         args: 
-        /Users/andreyrojas/Desktop/apache-jmeter-5.0/bin/jmeter.sh
+        - /Users/andreyrojas/Desktop/apache-jmeter-5.0/bin/jmeter.sh
         - -n 
         - -t 
-        /Users/andreyrojas/Desktop/meetup/EventCloud-full-suite.jmx
+        - /Users/andreyrojas/Desktop/meetup/EventCloud-full-suite.jmx
