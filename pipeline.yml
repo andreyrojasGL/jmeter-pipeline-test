@@ -1,0 +1,10 @@
+jobs:
+- name: perf-test-EventCloud
+  plan:
+  - task: run-jmeter-EventCloud
+      run:
+        path: /Users/andreyrojas/Desktop/apache-jmeter-5.0/bin/jmeter.sh
+        args: 
+        - -n 
+        - -t 
+        - /Users/andreyrojas/Desktop/meetup/EventCloud-full-suite.jmx 
