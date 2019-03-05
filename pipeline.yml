@@ -9,7 +9,7 @@ jobs:
   plan:
   - get: resource-jmeter
   - task: run-jmeter-EventCloud
-  config:
+    config:
       platform: linux
       image_resource:
         type: docker-image
