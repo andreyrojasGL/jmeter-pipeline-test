@@ -1,0 +1,21 @@
+resources:
+- name: resource-jmeter-2
+  type: git
+  source:
+    uri: https://github.com/andreyrojasGL/jmeter-pipeline-test.git
+    branch: master
+jobs:
+- name: job-perf-test-EventCloud-2
+  plan:
+  - get: resource-jmeter
+  - task: run-jmeter-EventCloud-2
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: egaillardon/jmeter
+      run:
+        path: sh
+        args: 
+        - whoami
