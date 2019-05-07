@@ -16,5 +16,8 @@ jobs:
         source:
           repository: egaillardon/jmeter
       run:
+        path: sh
         args: 
-        - whoami
+        - -exc
+        - |
+          whoami
