@@ -7,7 +7,7 @@ resources:
 jobs:
 - name: job-perf-test-EventCloud-2
   plan:
-  - get: resource-jmeter
+  - get: resource-jmeter-2
   - task: run-jmeter-EventCloud-2
     config:
       platform: linux
