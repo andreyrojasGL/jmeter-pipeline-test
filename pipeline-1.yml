@@ -20,4 +20,4 @@ jobs:
         args: 
         - -exc
         - |
-          whoami
+          docker run -it -t --rm -v /Users/andreyrojas/Desktop/meetup:/jmeter egaillardon/jmeter -n -t EventCloud-full-suite.jmx
