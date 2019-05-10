@@ -1,5 +1,5 @@
 resources:
-- name: resource-jmeter-2
+- name: repo
   type: git
   source:
     uri: https://github.com/andreyrojasGL/jmeter-pipeline-test.git
@@ -7,7 +7,7 @@ resources:
 jobs:
 - name: job-perf-test-EventCloud-2
   plan:
-  - get: resource-jmeter-2
+  - get: repo
   - task: run-jmeter-EventCloud-2
     config:
       platform: linux
@@ -15,9 +15,24 @@ jobs:
         type: docker-image
         source:
           repository: egaillardon/jmeter
+      inputs:
+      -  name: repo
+      outputs:
+      - name: report
       run:
         path: sh
         args: 
-        - -exc
+        - -c
         - |
-          docker run -it -t --rm -v /Users/andreyrojas/Desktop/meetup:/jmeter egaillardon/jmeter -n -t EventCloud-full-suite.jmx
+          set -e
+          cd repo
+          
+          jmeter -Dlog_level.jmeter=DEBUG \
+            -n -t EventCloud-full-suite.jmx -l test.jtl -j jmeter.log \
+            -e -o ../report
+            
+          echo "==== jmeter.log ===="
+          cat ./jmeter.log
+          
+          echo "==== Raw Test Report ===="
+          cat ./test.jtl
