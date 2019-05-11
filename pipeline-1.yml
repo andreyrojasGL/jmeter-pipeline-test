@@ -14,7 +14,7 @@ jobs:
       image_resource:
         type: docker-image
         source:
-          repository: egaillardon/jmeter
+          repository: egaillardon/jmeter-plugins
       inputs:
       -  name: repo
       outputs:
