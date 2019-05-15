@@ -14,7 +14,7 @@ jobs:
       image_resource:
         type: docker-image
         source:
-          repository: jmeter
+          repository: arojas/jmeter5.1.1
       inputs:
       -  name: repo
       outputs:
