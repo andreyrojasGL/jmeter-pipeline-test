@@ -553,7 +553,7 @@
               </elementProp>
               <elementProp name="influxDBHost" elementType="Argument">
                 <stringProp name="Argument.name">influxDBHost</stringProp>
-                <stringProp name="Argument.value">localhost</stringProp>
+                <stringProp name="Argument.value">10.10.48.118</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="influxDBPort" elementType="Argument">
