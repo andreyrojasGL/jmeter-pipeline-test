@@ -162,7 +162,7 @@
                 <stringProp name="Argument.value">{&#xd;
 	title: &quot;JMETER Event 6&quot;, &#xd;
 	description: &quot;JMeter&quot;, &#xd;
-	date: &quot;2019-05-19T04:43:44.000Z&quot;,&#xd;
+	date: &quot;2019-05-30T04:43:44.000Z&quot;,&#xd;
 	maxRegistrationCount: 1&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -553,7 +553,7 @@
               </elementProp>
               <elementProp name="influxDBHost" elementType="Argument">
                 <stringProp name="Argument.name">influxDBHost</stringProp>
-                <stringProp name="Argument.value">10.10.48.118</stringProp>
+                <stringProp name="Argument.value">192.168.8.104</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="influxDBPort" elementType="Argument">
